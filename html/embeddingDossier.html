@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="https://35.189.231.250:8443/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+
+
+</head>
+<body>
+  <TR>
+    <TD>
+      <DIV id="leftMenu">
+      <H2>Carlos maricón</H2>
+        </DIV>
+    </TD>
+    <TD>
+        <DIV id="dossierContent">
+      <!-- Dossier will appear here -->
+      </DIV>
+    </TD>
+</TR>
+</body>
+
+
+
+  <script type="text/javascript">
+
+//Get the div from the web page that will be used to hold the MicroStrategy Dossier
+var dossierContainer =document.getElementById("dossierContent");
+// Define the Dossier URL (from Workstation is the easiest)
+var secureCloudBaseURL = "https://35.189.231.250:8443/MicroStrategyLibrary/";
+var dossierURL = secureCloudBaseURL + "app/384C78D411E8F1759BD60080EFF55129/438CC45611E970E1A8960080EFC516F5";
+// Show Dossier
+microstrategy.dossier.create({
+url: dossierURL,
+placeholder: dossierContainer
+});
+</script>
+
+</html>
